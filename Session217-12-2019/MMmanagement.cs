@@ -40,6 +40,7 @@ namespace Session217_12_2019
                     string employeefullname = employeedetails.FirstName + " " + employeedetails.LastName;
 
                     object[] row = new object[6];
+
                     row[0] = item.Asset.AssetSN;
                     row[1] = item.Asset.AssetName;
                     row[2] = item.EMReportDate.ToString("yyyy-MM-dd");
