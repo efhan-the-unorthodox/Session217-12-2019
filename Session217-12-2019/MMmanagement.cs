@@ -36,6 +36,7 @@ namespace Session217_12_2019
                     var employeeID = item.Asset.EmployeeID;
                     var employeedetails = db.Employees.Where(emp => emp.ID == employeeID).FirstOrDefault();
 
+
                     string employeefullname = employeedetails.FirstName + " " + employeedetails.LastName;
 
                     object[] row = new object[6];
