@@ -79,7 +79,7 @@ namespace Session217_12_2019
             var assetID = assetTable.CurrentRow.Cells[4].Value;
             
             EMRequestAP emrequestform = new EMRequestAP(Convert.ToInt64(assetID));
-            emrequestform.refreshform = new EventHandler(loadAssetstable);
+            emrequestform.refreshform += new EventHandler(loadAssetstable);
             emrequestform.ShowDialog();
         }
     }

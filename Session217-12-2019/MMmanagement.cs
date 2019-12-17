@@ -27,6 +27,7 @@ namespace Session217_12_2019
         private void loadmaintenancerequests(object sender, EventArgs e)
         {
             //load all emergency maintenance requests
+            maintenanceRequeststable.Rows.Clear();
             using(Session2Entities db = new Session2Entities())
             {
                 var emrequests = db.EmergencyMaintenances.ToList();
@@ -56,6 +57,8 @@ namespace Session217_12_2019
             var maintenanceid = maintenanceRequeststable.CurrentRow.Cells[5].Value;
             EMID = (long)maintenanceid;
             EMrequestdetails newRequest = new EMrequestdetails(EMID);
+            EventHandler refreshform = new EventHandler(loadmaintenancerequests);
+            newRequest.refreshForm += refreshform;
             newRequest.ShowDialog();
         }
     }

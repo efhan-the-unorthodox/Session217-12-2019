@@ -39,7 +39,7 @@ namespace Session217_12_2019
                                           a
                                       }).FirstOrDefault();
 
-                if (getUserdetails.a == null)
+                if (getUserdetails == null)
                 {
                     MessageBox.Show("Invalid Username");
                 }

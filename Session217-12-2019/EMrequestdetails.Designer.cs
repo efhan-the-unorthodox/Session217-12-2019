@@ -36,18 +36,22 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.startdatepicker = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.techniciannote = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.enddatepicker = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
+            this.partscombobox = new System.Windows.Forms.ComboBox();
+            this.changedPartstable = new System.Windows.Forms.DataGridView();
+            this.PartName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Remove = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.PartID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label10 = new System.Windows.Forms.Label();
             this.cancelbtn = new System.Windows.Forms.Button();
             this.submitbutton = new System.Windows.Forms.Button();
@@ -55,7 +59,7 @@
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.changedPartstable)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
@@ -130,10 +134,12 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
+            this.groupBox2.Controls.Add(this.startdatepicker);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.techniciannote);
             this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.enddatepicker);
+            this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(12, 156);
             this.groupBox2.Name = "groupBox2";
@@ -142,12 +148,12 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Asset EM Report";
             // 
-            // dateTimePicker1
+            // startdatepicker
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(101, 37);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(277, 24);
-            this.dateTimePicker1.TabIndex = 6;
+            this.startdatepicker.Location = new System.Drawing.Point(101, 37);
+            this.startdatepicker.Name = "startdatepicker";
+            this.startdatepicker.Size = new System.Drawing.Size(277, 24);
+            this.startdatepicker.TabIndex = 6;
             // 
             // label9
             // 
@@ -158,14 +164,14 @@
             this.label9.TabIndex = 5;
             this.label9.Text = "Start Date: ";
             // 
-            // textBox1
+            // techniciannote
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(6, 93);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(846, 63);
-            this.textBox1.TabIndex = 3;
+            this.techniciannote.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.techniciannote.Location = new System.Drawing.Point(6, 93);
+            this.techniciannote.Multiline = true;
+            this.techniciannote.Name = "techniciannote";
+            this.techniciannote.Size = new System.Drawing.Size(846, 63);
+            this.techniciannote.TabIndex = 3;
             // 
             // label1
             // 
@@ -177,15 +183,29 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Technician note";
             // 
+            // enddatepicker
+            // 
+            this.enddatepicker.Location = new System.Drawing.Point(575, 37);
+            this.enddatepicker.Name = "enddatepicker";
+            this.enddatepicker.Size = new System.Drawing.Size(277, 24);
+            this.enddatepicker.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(496, 42);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 18);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "End Date:";
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.numericUpDown1);
             this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Controls.Add(this.comboBox1);
-            this.groupBox3.Controls.Add(this.dataGridView1);
-            this.groupBox3.Controls.Add(this.dateTimePicker2);
-            this.groupBox3.Controls.Add(this.label2);
+            this.groupBox3.Controls.Add(this.partscombobox);
+            this.groupBox3.Controls.Add(this.changedPartstable);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(12, 328);
@@ -197,16 +217,17 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(623, 70);
+            this.button1.Location = new System.Drawing.Point(623, 25);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(211, 27);
             this.button1.TabIndex = 11;
             this.button1.Text = "Add to list";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(462, 73);
+            this.numericUpDown1.Location = new System.Drawing.Point(462, 28);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(120, 24);
             this.numericUpDown1.TabIndex = 10;
@@ -215,51 +236,74 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(397, 74);
+            this.label11.Location = new System.Drawing.Point(397, 29);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(63, 18);
             this.label11.TabIndex = 9;
             this.label11.Text = "Amount:";
             // 
-            // comboBox1
+            // partscombobox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(120, 71);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(252, 26);
-            this.comboBox1.TabIndex = 8;
+            this.partscombobox.FormattingEnabled = true;
+            this.partscombobox.Location = new System.Drawing.Point(120, 26);
+            this.partscombobox.Name = "partscombobox";
+            this.partscombobox.Size = new System.Drawing.Size(252, 26);
+            this.partscombobox.TabIndex = 8;
             // 
-            // dataGridView1
+            // changedPartstable
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(9, 103);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(843, 162);
-            this.dataGridView1.TabIndex = 7;
+            this.changedPartstable.AllowUserToAddRows = false;
+            this.changedPartstable.AllowUserToDeleteRows = false;
+            this.changedPartstable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.changedPartstable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.changedPartstable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.PartName,
+            this.Amount,
+            this.Remove,
+            this.PartID});
+            this.changedPartstable.Location = new System.Drawing.Point(9, 58);
+            this.changedPartstable.Name = "changedPartstable";
+            this.changedPartstable.ReadOnly = true;
+            this.changedPartstable.RowHeadersWidth = 51;
+            this.changedPartstable.RowTemplate.Height = 24;
+            this.changedPartstable.Size = new System.Drawing.Size(843, 211);
+            this.changedPartstable.TabIndex = 7;
+            this.changedPartstable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.changedPartstable_CellContentClick);
             // 
-            // dateTimePicker2
+            // PartName
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(101, 37);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(277, 24);
-            this.dateTimePicker2.TabIndex = 6;
+            this.PartName.HeaderText = "Part Name";
+            this.PartName.MinimumWidth = 6;
+            this.PartName.Name = "PartName";
+            this.PartName.ReadOnly = true;
             // 
-            // label2
+            // Amount
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 18);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Start Date: ";
+            this.Amount.HeaderText = "Amount";
+            this.Amount.MinimumWidth = 6;
+            this.Amount.Name = "Amount";
+            this.Amount.ReadOnly = true;
+            // 
+            // Remove
+            // 
+            this.Remove.HeaderText = "Action";
+            this.Remove.MinimumWidth = 6;
+            this.Remove.Name = "Remove";
+            this.Remove.ReadOnly = true;
+            // 
+            // PartID
+            // 
+            this.PartID.HeaderText = "PartID";
+            this.PartID.MinimumWidth = 6;
+            this.PartID.Name = "PartID";
+            this.PartID.ReadOnly = true;
+            this.PartID.Visible = false;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(6, 73);
+            this.label10.Location = new System.Drawing.Point(6, 28);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(87, 18);
             this.label10.TabIndex = 1;
@@ -283,6 +327,7 @@
             this.submitbutton.TabIndex = 8;
             this.submitbutton.Text = "Submit";
             this.submitbutton.UseVisualStyleBackColor = true;
+            this.submitbutton.Click += new System.EventHandler(this.submitbutton_Click);
             // 
             // EMrequestdetails
             // 
@@ -304,7 +349,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.changedPartstable)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -319,13 +364,13 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker startdatepicker;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox techniciannote;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DataGridView changedPartstable;
+        private System.Windows.Forms.DateTimePicker enddatepicker;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button cancelbtn;
@@ -333,6 +378,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox partscombobox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PartName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
+        private System.Windows.Forms.DataGridViewLinkColumn Remove;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PartID;
     }
 }
